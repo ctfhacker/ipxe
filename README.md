@@ -30,9 +30,11 @@ chain ${net0/filename}
 On linux:
 
 ```
-sudo apt isntall liblzma liblzma-dev isolinux mmkisofs
-cd src
-make bin/ipxe.iso EMBED=../boot.ipxe
+sudo apt install liblzma5 liblzma-dev isolinux genisoimage
+git clone git://git.ipxe.org/ipxe.git
+cd ipxe/src
+make
+make bin/ipxe.iso EMBED=../../boot.ipxe
 ```
 
 ## Bochsrc
